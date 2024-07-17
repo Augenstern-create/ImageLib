@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "timing.h": "c",
+        "stdint.h": "c"
+    }
+}
