@@ -24,5 +24,5 @@ cmake -A x64 ^
 cmake --build . --config %BUILD_TYPE% -j8
 
 cd %BUILD_DIR%\%BUILD_TYPE%
-"demo.exe"
-cd ..\..
+"demo.exe" "%ROOT_DIR%image.jpg"
+cd %ROOT_DIR%

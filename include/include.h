@@ -36,7 +36,7 @@
 #if defined BUILDING_DLL
 #define NAN_API NAN_API_C PUBLIC
 #else
-#define NAN_API NAN_API_C PUBLIC
+#define NAN_API NAN_API_C 
 #endif
 
 #ifndef _MAX_DRIVE

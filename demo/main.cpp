@@ -60,8 +60,8 @@ int main(int argc, char **argv) {
         }
         startTime = now();
 #ifdef _AUTO_EXPOSURE
-    //  LocalColorCorrection(inputImage, outputImg, Width, Height, Channels);
-        LocalExponentialCorrection(inputImage, outputImg, Width, Height, Channels);
+     LocalColorCorrection(inputImage, outputImg, Width, Height, Channels);
+        // LocalExponentialCorrection(inputImage, outputImg, Width, Height, Channels);
 #endif
        
         double nProcessTime = calcElapsed(startTime, now());

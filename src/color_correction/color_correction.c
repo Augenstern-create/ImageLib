@@ -117,7 +117,7 @@ void LocalColorCorrection(unsigned char *Input, unsigned char *Output, int Width
     for (int mask = 0; mask < 256; mask++) {
         unsigned char *pLocalLut = LocalLut + (mask << 8);
         for (int pix = 0; pix < 256; pix++) {
-            pLocalLut[pix] = ClampToByte(255.0f * powf(pix / 255.0f, powf(2.0f, (128.0f - (255.0f - mask)) / 128.0f)));
+            pLocalLut[pix] = ClampToByte((int)(255.0f * powf((float)pix / 255.0f, powf(2.0f, (128.0f - (255.0f - mask)) / 128.0f))));
         }
     }
     Grayscale(Input, Output, Width, Height, Channels);
@@ -149,7 +149,7 @@ void LocalExponentialCorrection(unsigned char *Input, unsigned char *Output, int
     for (int mask = 0; mask < 256; mask++) {
         unsigned char *pLocalLut = LocalLut + (mask << 8);
         for (int pix = 0; pix < 256; pix++) {
-            pLocalLut[pix] = ClampToByte(255.0f * powf(pix / 255.0f, powf(2.0f, (128.0f - (255.0f - mask)) / 128.0f)));
+            pLocalLut[pix] = ClampToByte((int)(255.0f * powf((float)pix / 255.0f, powf(2.0f, (128.0f - (255.0f - mask)) / 128.0f))));
         }
     }
     Grayscale(Input, Luminance, Width, Height, Channels);
